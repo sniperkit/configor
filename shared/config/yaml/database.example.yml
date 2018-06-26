@@ -1,0 +1,7 @@
+---
+database:
+  adapter: mysql
+  name: qor_example
+  user: root
+  host: localhost
+  port: 3306

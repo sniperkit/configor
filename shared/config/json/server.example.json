@@ -1,0 +1,7 @@
+{
+  "server": {
+    "domain": "localhost",
+    "port": 8080,
+    "tls": true
+  }
+}

@@ -1,0 +1,4 @@
+[server]
+domain = "localhost"
+port = 8080.0
+tls = true

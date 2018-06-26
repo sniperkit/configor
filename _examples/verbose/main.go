@@ -7,8 +7,12 @@ import (
 	"github.com/k0kubun/pp"
 
 	// internal
-	"github.com/sniperkit/snk.golang.configor/pkg/configor"
+	configor "github.com/sniperkit/snk.golang.configor/pkg/configor"
 )
+
+var configFiles = []string{
+	"../../shared/config/config.example.yml"
+}
 
 var Config = struct {
 	APPName string `default:"app name"`
@@ -29,7 +33,7 @@ var Config = struct {
 func main() {
 
 	// Enable debug mode or set env `CONFIGOR_DEBUG_MODE` to true when running your application
-	configor.New(&configor.Config{Verbose: true}).Load(&Config, "../../shared/config/config-example.yml")
+	configor.New(&configor.Config{Verbose: true}).Load(&Config, configFiles...)
 
 	pp.Println("config:", Config)
 }

@@ -1,0 +1,11 @@
+{
+  "service": {
+    "smtp": {
+      "host": "smtp.gmail.com",
+      "port": 587,
+      "user": "user@domain.com",
+      "password": "xxxxxx",
+      "site": "http://www.domain.com"
+    }
+  }
+}

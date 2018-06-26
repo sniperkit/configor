@@ -4,8 +4,10 @@ import (
 	"fmt"
 
 	// internal
-	"github.com/sniperkit/snk.golang.configor/pkg/configor"
+	configor "github.com/sniperkit/snk.golang.configor/pkg/configor"
 )
+
+const configFile = "../../shared/config/config.example.yml"
 
 var Config = struct {
 	APPName string `default:"app name"`
@@ -24,6 +26,6 @@ var Config = struct {
 }{}
 
 func main() {
-	configor.Load(&Config, "../../shared/config/config-example.yml")
+	configor.Load(&Config, configFile)
 	fmt.Printf("config: %#v", Config)
 }

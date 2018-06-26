@@ -1,0 +1,21 @@
+[service]
+
+  [service.oauth]
+
+    [service.oauth.provider]
+
+      [service.oauth.provider.github]
+      clientid = "your github client id"
+      clientsecret = "your github client secret"
+
+      [service.oauth.provider.google]
+      clientid = "your google client id"
+      clientsecret = "your google client secret"
+
+      [service.oauth.provider.facebook]
+      clientid = "your facebook client id"
+      clientsecret = "your facebook client secret"
+
+      [service.oauth.provider.twitter]
+      clientid = "your twitter client id"
+      clientsecret = "your twitter client secret"

@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 	"path"
 	"reflect"
@@ -101,10 +102,16 @@ func processFile(config interface{}, file string, errorOnUnmatchedKeys bool) err
 			return yaml.UnmarshalStrict(data, config)
 		}
 		return yaml.Unmarshal(data, config)
+
+	//case strings.HasSuffix(file, ".ini"):
+	//	return unmarshalIni(data, config, errorOnUnmatchedKeys)
+
 	case strings.HasSuffix(file, ".toml"):
 		return unmarshalToml(data, config, errorOnUnmatchedKeys)
+
 	case strings.HasSuffix(file, ".json"):
 		return unmarshalJSON(data, config, errorOnUnmatchedKeys)
+
 	default:
 
 		if err := unmarshalToml(data, config, errorOnUnmatchedKeys); err == nil {
@@ -183,6 +190,7 @@ func (configor *Configor) processTags(config interface{}, prefixes ...string) er
 		if envName == "" {
 			envNames = append(envNames, strings.Join(append(prefixes, fieldStruct.Name), "_"))                  // Configor_DB_Name
 			envNames = append(envNames, strings.ToUpper(strings.Join(append(prefixes, fieldStruct.Name), "_"))) // CONFIGOR_DB_NAME
+
 		} else {
 			envNames = []string{envName}
 		}
@@ -193,6 +201,7 @@ func (configor *Configor) processTags(config interface{}, prefixes ...string) er
 
 		// Load From Shell ENV
 		for _, env := range envNames {
+
 			if value := os.Getenv(env); value != "" {
 				if configor.Config.Debug || configor.Config.Verbose {
 					fmt.Printf("Loading configuration for struct `%v`'s field `%v` from env %v...\n", configType.Name(), fieldStruct.Name, env)

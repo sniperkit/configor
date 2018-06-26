@@ -1,0 +1,22 @@
+[service]
+
+  [service.amazon_aws]
+
+    [service.amazon_aws.amazon_s3]
+    access_key = "your access key"
+    secret_key = "your secret key"
+    region = "your bucket region"
+    bucket = "your bucket name"
+
+    [service.amazon_aws.amazon_pay]
+    merchant_id = ""
+    access_key = ""
+    secret_key = ""
+    client_id = ""
+    client_secret = ""
+    sandbox_mode = ""
+    currency_code = ""
+
+  [service.paypal]
+  email = "your paypal email address"
+  sandbox_mode = true

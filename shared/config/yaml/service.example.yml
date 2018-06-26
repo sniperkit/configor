@@ -1,0 +1,40 @@
+---
+service:
+
+  amazon_aws:
+    amazon_s3:
+      access_key: 'your access key'
+      secret_key: 'your secret key'
+      region: 'your bucket region'
+      bucket: 'your bucket name'
+
+    amazon_pay:
+      merchant_id: 'your merchant id'
+      access_key: 'your access key'
+      secret_key: 'your secret key'
+      client_id: 'your client id'
+      client_secret: 'your client secret'
+      sandbox_mode: 'is sandbox mode activated ?'
+      currency_code: your transaction's currency code
+
+  oauth:
+    provider:
+      github:
+        client_id: 'your github client id'
+        client_secret: 'your github client secret'
+
+      google:
+        client_id: 'your google client id'
+        client_secret: 'your google client secret'
+
+      facebook:
+        client_id: 'your facebook client id'
+        client_secret: 'your facebook client secret'
+
+      twitter:
+        client_id: 'your twitter client id'
+        client_secret: 'your twitter client secret'
+
+  paypal:
+    email: 'your paypal email address'
+    sandbox_mode: true

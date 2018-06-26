@@ -1,0 +1,5 @@
+application:
+  name: 'your test app name'
+  timezone: 'Europe/Paris'
+  version: 1.0
+  sandbox_mode: true

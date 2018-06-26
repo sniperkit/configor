@@ -1,0 +1,71 @@
+[application]
+name = "your test app name"
+timezone = "Europe/Paris"
+version = 1.0
+sandbox_mode = true
+
+  [[application.contacts]]
+  name = "i test"
+  email = "test@test.com"
+
+[database]
+adapter = "mysql"
+name = "qor_example"
+user = "root"
+host = "localhost"
+port = 3306.0
+
+[server]
+host = "localhost"
+port = 8080.0
+tls = true
+
+[service]
+
+  [service.amazon_aws]
+
+    [service.amazon_aws.amazon_s3]
+    access_key = "your access key"
+    secret_key = "your secret key"
+    region = "your bucket region"
+    bucket = "your bucket name"
+
+    [service.amazon_aws.amazon_pay]
+    merchant_id = "your merchant id"
+    access_key = "your access key"
+    secret_key = "your secret key"
+    client_id = "your client id"
+    client_secret = "your client secret"
+    sandbox_mode = "is sandbox mode activated ?"
+    currency_code = "your transaction's currency code"
+
+  [service.oauth]
+
+    [service.oauth.provider]
+
+      [service.oauth.provider.github]
+      client_id = "your github client id"
+      client_secret = "your github client secret"
+
+      [service.oauth.provider.google]
+      client_id = "your google client id"
+      client_secret = "your google client secret"
+
+      [service.oauth.provider.facebook]
+      client_id = "your facebook client id"
+      client_secret = "your facebook client secret"
+
+      [service.oauth.provider.twitter]
+      client_id = "your twitter client id"
+      client_secret = "your twitter client secret"
+
+  [service.paypal]
+  email = "your paypal email address"
+  sandbox_mode = true
+
+  [service.smtp]
+  host = "smtp.gmail.com"
+  port = 587.0
+  user = "user@domain.com"
+  password = "xxxxxx"
+  site = "http://www.domain.com"
