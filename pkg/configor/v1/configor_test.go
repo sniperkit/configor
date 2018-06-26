@@ -8,10 +8,12 @@ import (
 	"reflect"
 	"testing"
 
+	// external
+	"github.com/BurntSushi/toml"
 	"gopkg.in/yaml.v2"
 
-	"github.com/BurntSushi/toml"
-	"github.com/jinzhu/configor"
+	// internal - core
+	"github.com/sniperkit/snk.golang.configor/pkg/configor/v1"
 )
 
 type Anonymous struct {

@@ -3,13 +3,13 @@
 package configor_test
 
 import (
-	"encoding/json"
 	"io/ioutil"
 	"os"
 	"strings"
 	"testing"
 
-	"github.com/jinzhu/configor"
+	// external
+	"github.com/sniperkit/snk.golang.json/pkg/json"
 )
 
 func TestUnmatchedKeyInJsonConfigFile(t *testing.T) {
