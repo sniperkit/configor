@@ -1,0 +1,13 @@
+package: github.com/sniperkit/snk.golang.configor
+import:
+- package: github.com/BurntSushi/toml
+- package: github.com/sniperkit/snk.golang.json
+  subpackages:
+  - pkg/json
+- package: github.com/sniperkit/snk.golang.toml
+  subpackages:
+  - pkg/toml
+- package: github.com/sniperkit/snk.golang.yaml
+  subpackages:
+  - pkg/yaml
+- package: gopkg.in/yaml.v2

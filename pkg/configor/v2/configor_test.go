@@ -8,10 +8,10 @@ import (
 	"testing"
 
 	// external
-	"github.com/sniperkit/snk.golang.ini/pkg/ini"
 	"github.com/sniperkit/snk.golang.json/pkg/json"
 	"github.com/sniperkit/snk.golang.toml/pkg/toml"
 	"github.com/sniperkit/snk.golang.yaml/pkg/yaml"
+	// "github.com/sniperkit/snk.golang.ini/pkg/ini"
 
 	// internal - core
 	"github.com/sniperkit/snk.golang.configor/pkg/configor/v2"

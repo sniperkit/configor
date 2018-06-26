@@ -1,0 +1,22 @@
+hash: 3a213d6f975c8fe75e26deadfe5a736d1a4079833246e6e5f87a7303ba31f706
+updated: 2018-06-26T11:50:14.531353123+02:00
+imports:
+- name: github.com/BurntSushi/toml
+  version: a368813c5e648fee92e5f6c30e3944ff9d5e8895
+- name: github.com/sniperkit/snk.golang.json
+  version: 5df5c5ae32e9e977c6189155a529656005816bef
+  subpackages:
+  - pkg/json
+- name: github.com/sniperkit/snk.golang.toml
+  version: 6e849655041659e0ae6d63644b1f108f178b5fb5
+  subpackages:
+  - pkg/toml
+  - pkg/toml/v1
+- name: github.com/sniperkit/snk.golang.yaml
+  version: 3c912074fa7318b21cb96edc6f1f90978c0a3276
+  subpackages:
+  - pkg/yaml
+  - pkg/yaml/v2
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+testImports: []
